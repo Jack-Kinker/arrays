@@ -1,0 +1,59 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <h2 id=kata1>Space</h2>
+        <h2 id=kata2>Space</h2>
+        <h2 id=kata3>Space</h2>
+        <h2 id=kata4>Space</h2>
+        <h2 id=kata55>Space</h2>
+        <h2 id=kata6>Space</h2>
+        <h2 id=kata77>Space</h2>
+        <h2 id=kata88>Space</h2>
+        <h2 id=kata99>Space</h2>
+        <h2 id=kata1010>Space</h2>
+        <script>
+            const gotCitiesCSV = ["King's Landing","Braavos","Volantis","Old Valyria","Free Cities","Qarth","Meereen"];
+            const lotrCitiesArray = ["Mordor","Gondor","Rohan","Beleriand","Mirkwood","Dead Marshes","Rhun","Harad"];
+            const bestThing = "The best thing about a boolean is even if you are wrong you are only off by a bit";
+            
+            //Display an array from the cities in gotCitiesCSV
+            kata1.textContent = JSON.stringify(gotCitiesCSV);
+            //Display an array of words from the sentence in bestThing
+            kata2.textContent = JSON.stringify(bestThing.split(' '));
+            //Display a string separated by semi-colons instead of commas from gotCitiesCSV
+            kata3.textContent = JSON.stringify(gotCitiesCSV.join(";"));
+            //Display a CSV (comma-separated) string from the lotrCitiesArray
+            kata4.textContent = JSON.stringify(lotrCitiesArray);
+            //Display the last 5 cities in lotrCitiesArray
+            let kata5 =[];
+            for (i=3; i<lotrCitiesArray.length; i++){
+                kata5.push(lotrCitiesArray[i]);
+            }
+            kata55.textContent = JSON.stringify(kata5);
+            //Using splice, remove "Rohan" from lotrCitiesArray
+            lotrCitiesArray.splice(2,1);
+            kata6.textContent = JSON.stringify(lotrCitiesArray);
+            //Using slice, display characters between the 23rd and 38th position of bestThing (i.e., "boolean is even"
+            var kata7 = bestThing.slice(23,38);
+            kata77.textContent = JSON.stringify(kata7);
+            //Find and display the index of "only" in bestThing
+            var kata8 = bestThing.indexOf("only");
+            kata88.textContent = JSON.stringify(kata8);
+            //Find and display all cities from gotCitiesCSV  that use double vowels ("aa","ee", etc.)
+            let kata9 =[];
+            for (i = 0; i<gotCitiesCSV.length; i++) {
+                if (gotCitiesCSV[i].includes("aa") || gotCitiesCSV[i].includes("ee") || gotCitiesCSV[i].includes("ii") || gotCitiesCSV[i].includes("oo") || gotCitiesCSV[i].includes("uu")){
+                kata9.push(gotCitiesCSV[i]);
+                }
+            }
+            kata99.textContent = JSON.stringify(kata9);
+            //Sort lotrCitiesArray into alphabetical order.
+            var kata10 = lotrCitiesArray.sort();
+            kata1010.textContent = JSON.stringify(kata10);
+        </script>
+        
+    </body>
+</html>
